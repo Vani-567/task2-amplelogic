@@ -1,0 +1,52 @@
+<div class="container-fluid ">
+    <div class="card-body">
+        <div class="d-flex flex-wrap justify-content-between">
+            <span> <h5><strong>Check On UIROLL Onboaring
+                        Employee</strong></h5></span>
+            <span><button
+                    class="btn bg-success rounded-pill text-white mx-3"><i
+                        class="fa fa-filter"></i> &nbsp; Filter
+                </button>
+                <button
+                    class="btn bg-success rounded-pill text-white"><i
+                        class="fa fa-cloud-download"></i> &nbsp; Export
+                </button>
+            </span>
+        </div>
+        <div class="table-responsive">
+
+        <table datatable [dtOptions]="dtOptions"
+            class="row-border hover ">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>Full Name</th>
+                    <th>Emp Id</th>
+                    <th>Progress</th>
+                    <th>Email Id</th>
+                    <th>Interested In</th>
+                    <th>Address</th>
+                    <th>Hiring Manager</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="data?.length != 0">
+                <tr *ngFor="let item of data; ">
+                    <td><input type="checkbox" /></td>
+                    <td>{{ item.full_name }} </td>
+                    <td>{{ item.emp_Id }}</td>
+                    <td>{{ item.progress }}</td>
+                    <td>{{ item.email_id }}</td>
+                    <td>{{item.interested_in}}</td>
+                    <td>{{item.Address}}</td>
+                    <td>{{item.manager}}</td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="data?.length == 0">
+                <td colspan="6"
+                    class="no-data-available text-center">No
+                    data Available</td>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>

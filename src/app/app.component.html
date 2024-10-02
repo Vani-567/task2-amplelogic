@@ -1,0 +1,69 @@
+<div class="container-fluid " style="background-color: rgb(240, 238, 238);">
+  <div id="grad1" class="pt-3 px-5">
+    <h1 class="text-white">Welcome
+    </h1>
+    <h3 class="text-white"> to
+      Onboarding Tool !</h3>
+  </div>
+
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-3 col-sm-12  col-md-6"
+      *ngFor="let item of cards_data">
+      <div class="card main1">
+        <div class=" d-flex flex-row justify-content-around">
+          <div class="icon bg-info"><span><i [class]="item.iconClass1"
+                aria-hidden="true"></i>
+            </span> </div>
+          <div class="mt-2"><strong>{{item.percentage}}</strong></div>
+        </div>
+        <p style="text-align: center;"><b>{{item.text}}</b></p>
+        <div class=" d-flex flex-row justify-content-around">
+          <div><strong><h3>{{item.count}}</h3></strong> </div>
+          <div class="mt-2"><i [class]="item.iconClass2" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-md-9 col-sm-12">
+        <div class="card  ">
+          <div class="row d-flex flex-wrap">
+            <div class="col-lg-8 my-5 px-5">
+              <h2>Do not Know Where to Start?</h2>
+              <p>Take a quick tour of our onboarding tool to know how to onboard
+                on
+                employee</p>
+              <button class="btn btn-primary btn-lg rounded-pill">Start a
+                tour &nbsp; <i class="fa fa-long-arrow-right"
+                  aria-hidden="true"></i></button>
+            </div>
+            <div class="col-lg-4">
+              <img src="../assets/img/144.webp" style="width: 250px;" alt>
+            </div>
+          </div></div>
+      </div>
+      <div class="col-md-3  ">
+        <div class="card">
+          <div
+            class=" d-flex flex-column justify-content-center align-items-center   my-5">
+            <button class="btn btn-primary btn-lg rounded-pill">View
+              Dashboard &nbsp; <i class="fa fa-long-arrow-right"
+                aria-hidden="true"></i></button>
+            <button class="btn btn-success btn-lg rounded-pill">Add New
+              Employee &nbsp; <i class="fa fa-long-arrow-right"
+                aria-hidden="true"></i></button>
+
+            <button
+              class="btn btn-primary btn-lg rounded-pill">Customization &nbsp;
+              <i
+                class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card my-5" ><app-employees-data></app-employees-data></div>
+</div>
